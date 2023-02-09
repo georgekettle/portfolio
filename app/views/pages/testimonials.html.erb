@@ -1,0 +1,25 @@
+<section id="about_me">
+  <div class="relative px-6 lg:px-8">
+    <div class="container-sm py-16">
+      <h1 class="mt-6 text-2xl font-bold leading-relaxed tracking-tight text-gray-900 sm:text-5xl">I've taught all over the world.<br>Here's what people have to say.</h1>
+      <p class="mt-6 text-lg leading-7 text-gray-600"><span class="px-2 py-1 bg-secondary-300 rounded text-secondary-900 text-sm border border-secondary-900 -rotate-6 -mr-2 inline-block font-header transform -translate-y-1 -translate-x-4">ChatGPT Summary</span> People think highly of George and consider him to be an excellent teacher and software developer. He is knowledgeable, confident, clear, engaging, patient, kind, and always willing to help, with great problem-solving skills and subject knowledge. He is well-liked for his technical skills, positive attitude, humor, and ability to explain complex concepts simply, and is seen as an asset to the Le Wagon community.</p>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="relative px-6 lg:px-8">
+    <div class="py-20">
+      <div class="container-lg relative">
+        <div data-controller="grid" class="-mx-2">
+          <div class="grid-sizer"></div>
+          <% @quotes.each do |quote| %>
+            <div class="grid-item p-2">
+              <%= render quote %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

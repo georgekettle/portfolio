@@ -1,0 +1,35 @@
+<li class="text-secondary-900">
+  <div class="relative">
+    <%= image_tag project.image_url, alt: project.title, class: "aspect-[3/2] w-full rounded-xl object-cover border border-black shadow" %>
+    <%# open_source badge top left %>
+    <% if project.open_source %>
+      <div class="absolute top-0 left-0 px-2 py-1 bg-secondary-300 rounded text-secondary-900 text-sm border border-secondary-900 -rotate-6 -ml-2 -mt-2 inline-block">
+        Open Source
+      </div>
+    <% end %>
+  </div>
+  <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900"><%= project.title %></h3>
+  <p class="text-base leading-7 text-secondary-600"><%= project.technologies.map(&:name).join(' · ') %></p>
+  <p class="mt-4 text-base leading-7 text-gray-600"><%= project.description %></p>
+  <ul role="list" class="mt-6 flex items-center gap-x-6">
+    <% if project.link %>
+      <li>
+        <%= link_to project.link, class: "btn", target: '_blank' do %>
+          <span class="sr-only">Website</span>
+          <span>Visit site</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 ml-2 -mr-2">
+            <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd" />
+          </svg>
+        <% end %>
+      </li>
+    <% end %>
+    <% if project.github_link %>
+      <li>
+        <%= link_to project.github_link, class: "text-gray-400 hover:text-gray-500", target: '_blank' do %>
+          <span class="sr-only">Github</span>
+          <svg viewBox="0 0 16 16" class="w-5 h-5" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</li>

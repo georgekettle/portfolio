@@ -1,0 +1,27 @@
+<div class="p-4 md:p-6 rounded-xl bg-primary-50 border border-black space-y-4 text-primary-900">
+  <% @work.each do |work| %>
+    <div data-controller="reveal" data-reveal-hidden-class="h-0">
+      <button data-action="click->reveal#toggle" type="button" class="p-2 rounded-md flex items-center justify-between w-full">
+        <div class="flex items-center space-x-2 text-start">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+            <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+          </svg>
+          <div>
+            <div class="flex items-center">
+              <h3 class="uppercase tracking-wide"><%= work.company %></h3>
+              <p class="ml-2 text-sm text-primary-700"><%= work.start_year %> - <%= work.end_year %></p>
+            </div>
+            <p class="text-sm text-primary-700"><%= work.role_title %></p>
+          </div>
+        </div>
+        <div class='p-1 rounded-full border border-transparent hover:bg-white hover:border-black ml-2 shrink-0'>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+          </svg>
+        </div>
+      </button>
+
+      <p data-reveal-target="item" class="h-0 overflow-hidden transition-all delay-100 duration-300 ease-out px-4 pl-12"><%= work.description %></p>
+    </div>
+  <% end %>
+</div>
