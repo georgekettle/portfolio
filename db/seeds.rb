@@ -1,4 +1,4 @@
-chatterbot = Project.new(title: "ChatterBot", description: "A no code solution to creating your own ChatBot powered by ChatGPT. I specifically want to create this for my Mum so that she could save time and automate her customer service.", github_link: 'https://github.com/georgekettle/bot-chat', image_url: "chatterbot.svg")
+chatterbot = Project.new(title: "ChatterBot", description: "A no code solution to creating your own ChatBot powered by ChatGPT. I specifically want to create this for my Mum so that she could save time and automate her customer service.", github_link: 'https://github.com/georgekettle/chatterbot-market', image_url: "chatterbot.svg")
 chatterbot.technology_list.add("React Native", "Ruby on Rails")
 chatterbot.save!
 
