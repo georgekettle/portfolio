@@ -1,4 +1,6 @@
 class BlogsController < ApplicationController
+    before_action :authenticate_user!, only: [:new, :create]
+
     # GET /blogs
     def index
         @blogs = Blog.all
