@@ -6,7 +6,10 @@
         <%= image_tag "logo.svg" %>
         <span class="sr-only">George Kettle</span>
       <% end %>
-      <%# link_to 'Blog', '#', class: 'hidden font-medium md:inline-block opacity-50 hover:opacity-100 transition-all duration-300 ease-out hover:underline underline-offset-4' %>
+      <% if user_signed_in? %>
+        <%= link_to 'New Blog', new_blog_path, class: 'hidden font-medium md:inline-block opacity-50 hover:opacity-100 transition-all duration-300 ease-out hover:underline underline-offset-4' %>
+        <%= link_to 'Sign out', destroy_user_session_path, data: { turbo_method: :delete }, class: 'hidden font-medium md:inline-block opacity-50 hover:opacity-100 transition-all duration-300 ease-out hover:underline underline-offset-4' %>
+      <% end %>
     </div>
     <div class="flex items-center space-x-4">
       <%# TWITTER %>

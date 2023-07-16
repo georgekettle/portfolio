@@ -92,7 +92,47 @@
 #   { source: "Batch 990 (Europe)", content: "Any lesson with George was very good. He interacted a lot with us and nobody slept. Probably the best teacher we had." },
 # ])
 
+User.destroy_all
+Blog.destroy_all
+
+User.create!([
+  email: 'george.kettle@icloud.com',
+  password: 'georgeisthebest',
+  password_confirmation: 'georgeisthebest',
+])
+
 # Create blogs
 Blog.create([
-  
+  {
+    title: "How to create a ChatBot with ChatGPT and React Native",
+    content: "I recently created a ChatBot app using React Native and ChatGPT. I wanted to create this for my Mum so that she could save time and automate her customer service. I also wanted to create this for myself so that I could learn more about ChatGPT and how to integrate it with React Native. I also wanted to learn more about how to create a React Native app from scratch. I have created a few React Native apps before, but I have always used Expo to create them. This time I wanted to create a React Native app from scratch so that I could learn more about the native side of things. I also wanted to learn more about how to integrate ChatGPT with React Native. I have created a few React Native apps before, but I have always used Expo to create them. This time I wanted to create a React Native app from scratch so that I could learn more about the native side of things.",
+  },
+  {
+    title: "How to create a ChatBot with ChatGPT and React Native",
+    content: "I recently created a ChatBot app using React Native and ChatGPT. I wanted to create this for my Mum so that she could save time and automate her customer service. I also wanted to create this for myself so that I could learn more about ChatGPT and how to integrate it with React Native. I also wanted to learn more about how to create a React Native app from scratch. I have created a few React Native apps before, but I have always used Expo to create them. This time I wanted to create a React Native app from scratch so that I could learn more about the native side of things. I also wanted to learn more about how to integrate ChatGPT with React Native. I have created a few React Native apps before, but I have always used Expo to create them. This time I wanted to create a React Native app from scratch so that I could learn more about the native side of things.",
+  },
+  {
+    title: "How to create a ChatBot with ChatGPT and React Native",
+    content: "I recently created a ChatBot app using React Native and ChatGPT. I wanted to create this for my Mum so that she could save time and automate her customer service. I also wanted to create this for myself so that I could learn more about ChatGPT and how to integrate it with React Native. I also wanted to learn more about how to create a React Native app from scratch. I have created a few React Native apps before, but I have always used Expo to create them. This time I wanted to create a React Native app from scratch so that I could learn more about the native side of things. I also wanted to learn more about how to integrate ChatGPT with React Native. I have created a few React Native apps before, but I have always used Expo to create them. This time I wanted to create a React Native app from scratch so that I could learn more about the native side of things.",
+  },
+  {
+    title: "How to create a ChatBot with ChatGPT and React Native",
+    content: "I recently created a ChatBot app using React Native and ChatGPT. I wanted to create this for my Mum so that she could save time and automate her customer service. I also wanted to create this for myself so that I could learn more about ChatGPT and how to integrate it with React Native. I also wanted to learn more about how to create a React Native app from scratch. I have created a few React Native apps before, but I have always used Expo to create them. This time I wanted to create a React Native app from scratch so that I could learn more about the native side of things. I also wanted to learn more about how to integrate ChatGPT with React Native. I have created a few React Native apps before, but I have always used Expo to create them. This time I wanted to create a React Native app from scratch so that I could learn more about the native side of things.",
+  },
+  {
+    title: "How to create a ChatBot with ChatGPT and React Native",
+    content: "I recently created a ChatBot app using React Native and ChatGPT. I wanted to create this for my Mum so that she could save time and automate her customer service. I also wanted to create this for myself so that I could learn more about ChatGPT and how to integrate it with React Native. I also wanted to learn more about how to create a React Native app from scratch. I have created a few React Native apps before, but I have always used Expo to create them. This time I wanted to create a React Native app from scratch so that I could learn more about the native side of things. I also wanted to learn more about how to integrate ChatGPT with React Native. I have created a few React Native apps before, but I have always used Expo to create them. This time I wanted to create a React Native app from scratch so that I could learn more about the native side of things.",
+  },
+  {
+    title: "How to create a ChatBot with ChatGPT and React Native",
+    content: "I recently created a ChatBot app using React Native and ChatGPT. I wanted to create this for my Mum so that she could save time and automate her customer service. I also wanted to create this for myself so that I could learn more about ChatGPT and how to integrate it with React Native. I also wanted to learn more about how to create a React Native app from scratch. I have created a few React Native apps before, but I have always used Expo to create them. This time I wanted to create a React Native app from scratch so that I could learn more about the native side of things. I also wanted to learn more about how to integrate ChatGPT with React Native. I have created a few React Native apps before, but I have always used Expo to create them. This time I wanted to create a React Native app from scratch so that I could learn more about the native side of things.",
+  },
+  {
+    title: "How to create a ChatBot with ChatGPT and React Native",
+    content: "I recently created a ChatBot app using React Native and ChatGPT. I wanted to create this for my Mum so that she could save time and automate her customer service. I also wanted to create this for myself so that I could learn more about ChatGPT and how to integrate it with React Native. I also wanted to learn more about how to create a React Native app from scratch. I have created a few React Native apps before, but I have always used Expo to create them. This time I wanted to create a React Native app from scratch so that I could learn more about the native side of things. I also wanted to learn more about how to integrate ChatGPT with React Native. I have created a few React Native apps before, but I have always used Expo to create them. This time I wanted to create a React Native app from scratch so that I could learn more about the native side of things.",
+  },
+  {
+    title: "How to create a ChatBot with ChatGPT and React Native",
+    content: "I recently created a ChatBot app using React Native and ChatGPT. I wanted to create this for my Mum so that she could save time and automate her customer service. I also wanted to create this for myself so that I could learn more about ChatGPT and how to integrate it with React Native. I also wanted to learn more about how to create a React Native app from scratch. I have created a few React Native apps before, but I have always used Expo to create them. This time I wanted to create a React Native app from scratch so that I could learn more about the native side of things. I also wanted to learn more about how to integrate ChatGPT with React Native. I have created a few React Native apps before, but I have always used Expo to create them. This time I wanted to create a React Native app from scratch so that I could learn more about the native side of things.",
+  },
 ])
