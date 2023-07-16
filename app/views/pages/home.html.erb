@@ -31,7 +31,13 @@
 
 <div class="container-lg pb-32 space-y-8">
     <h2 class="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">Recent posts</h2>
-    <%= render 'blogs/blogs', blogs: @blogs %>
+    <% if @blogs.any? %>
+        <%= render 'blogs/blogs', blogs: @blogs %>
+    <% else %>
+        <div class="bg-white rounded-lg border border-tertiary-200 p-6 text-center text-tertiary-500 shadow">
+            Blog posts coming soon! 😉
+        </div>
+    <% end %>
     <div class="flex justify-center">
         <%# BLOG LINK %>
         <%= link_to blogs_path, class: "flex items-center gap-x-2 rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-tertiary-800 border border-tertiary-200 shadow-sm hover:bg-tertiary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tertiary-900" do %>
