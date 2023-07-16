@@ -34,7 +34,41 @@
         @apply text-base font-medium text-tertiary-900 tracking-tight;
     }
 
+    /* CONTAINERS */
+    .container {
+        @apply max-w-3xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
     .container-lg {
         @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    /* FORMS */
+    .form-inputs {
+        @apply space-y-5;
+    }
+
+    .form-actions {
+        @apply mt-5;
+    }
+
+    .form-input {
+        @apply block w-full rounded-md border-0 py-1.5 text-tertiary-900 shadow-sm ring-1 ring-inset ring-tertiary-300 placeholder:text-tertiary-400 focus:ring-2 focus:ring-inset focus:ring-tertiary-950 sm:text-sm sm:leading-6;
+    }
+    
+    .form-input.error {
+        @apply ring-danger-500 bg-danger-50;
+    }
+
+    input[type="file"] {
+        @apply bg-white block w-full rounded-md border-0 p-0 text-tertiary-900 shadow-sm ring-1 ring-tertiary-300 placeholder:text-tertiary-400 focus:ring-1 focus:ring-inset focus:ring-tertiary-950 sm:text-sm sm:leading-6 file:mr-4 file:py-2.5 file:px-4 file:rounded-none file:border-0 file:text-sm file:font-medium file:bg-tertiary-50 file:text-tertiary-700 file:rounded-l-md hover:file:bg-tertiary-100 file:ring-1 file:ring-inset file:ring-tertiary-300 file:cursor-pointer;
+    }
+
+    abbr[title="required"] {
+        @apply text-danger-500 no-underline;
+    }
+
+    .input-as-header {
+        @apply shadow-none mt-0 bg-transparent border-0 text-tertiary-900 ring-0 px-0 transition-all duration-100 ease-in-out focus:form-input;
     }
 }

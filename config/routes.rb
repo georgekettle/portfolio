@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  resources :blogs, only: [:index, :show]
+  resources :blogs, only: [:index, :show, :new, :create]
 
   # Defines the root path route ("/")
   get 'download_resume', to: 'pages#download_resume', as: :download_resume

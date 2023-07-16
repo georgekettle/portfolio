@@ -4,8 +4,8 @@
     </div>
     <div class="grid grid-2 gap-6">
         <% blogs_sliced_by_3 = @blogs.each_slice(3).to_a %>
-        <% blogs_sliced_by_3.each do |blog_slice| %>
-            <%= render 'blogs/blogs', blogs: blog_slice %>
+        <% blogs_sliced_by_3.each_with_index do |blog_slice, index| %>
+            <%= render 'blogs/blogs', blogs: blog_slice, reverse: index.odd? %>
         <% end %>
     </div>
 </div>
