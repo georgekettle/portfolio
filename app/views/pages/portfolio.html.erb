@@ -1,0 +1,81 @@
+<section class="scroll-mt-20" id="about_me">
+    <div class="container-sm py-24">
+      <%= image_tag 'george.jpg', alt: 'George Kettle', height: 100, width: 100, class: 'rounded-full border border-black h-16 w-16' %>
+      <h1 class="mt-6 text-3xl font-bold tracking-tight text-tertiary-900 sm:text-5xl">Ruby on Rails Developer<br>& Bootcamp Educator.</h1>
+      <p class="mt-6 text-lg leading-7 text-tertiary-600">I learned to code to help my mother's organic farm. My passion for small business led me to start my own venture with a friend, and for the past two years, I have been imparting my knowledge as a teacher at Le Wagon.</p>
+      <div class="mt-10 flex items-center space-x-4">
+        <%= link_to download_resume_path, class: 'btn btn-primary' do %>
+          DOWNLOAD CV
+        <% end %>
+      </div>
+    </div>
+</section>
+
+<section class="scroll-mt-20" id="testimonials">
+  <div class="py-20">
+    <div class="container-sm">
+      <h2 class="text-2xl font-bold tracking-tight text-tertiary-900 sm:text-3xl">My Mum thinks I'm amazing <span class="px-2 py-1 bg-secondary-300 rounded text-secondary-900 text-sm border border-secondary-900 rotate-6 ml-2 inline-block">BUT...</span></h1>
+      <p class="mt-6 text-lg leading-8 text-tertiary-600">She may be biased so don't take her word for it!<br>At <%= link_to 'Le Wagon', 'www.lewagon.com', target: '_blank' %> we receive anonymous reviews. Here's what people have to say.</p>
+    </div>
+    <div class="container-lg mt-20 relative max-h-screen overflow-hidden">
+      <div data-controller="grid" class="-mx-2">
+        <div class="grid-sizer"></div>
+        <% @quotes.each do |quote| %>
+          <div class="grid-item p-2">
+            <%= render quote %>
+          </div>
+        <% end %>
+      </div>
+      <%# Fade %>
+      <div class="absolute flex items-end justify-center bottom-0 inset-x-0 h-64 bg-gradient-to-t from-bg-light pointer-events-none">
+        <%= link_to "100's more", testimonials_path, class: 'btn pointer-events-auto' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-6">
+  <article class="flex whitespace-no-wrap overflow-x-hidden bg-primary-600 text-primary-200">
+    <div class="relative">
+      <ul class="flex animate-marqueeone">
+        <% @technologies.each do |tech| %>
+          <li class="m-8 whitespace-nowrap font-header text-md"><%= tech %></li>
+        <% end %>
+      </ul>
+      <ul class="flex absolute top-0 animate-marqueetwo">
+        <% @technologies.each do |tech| %>
+          <li class="m-8 whitespace-nowrap font-header text-md"><%= tech %></li>
+        <% end %>
+      </ul>
+    </div>
+  </article>
+</section>
+
+<section class="scroll-mt-20" id="work_education">
+  <div class="py-20">
+    <div class="container-sm">
+      <h2 class="text-2xl font-bold tracking-tight text-tertiary-900 sm:text-3xl">Work & Education</h1>
+      <p class="mt-6 text-lg leading-8 text-tertiary-600">University, Bootcamps & Small Business</p>
+    </div>
+    <div class="container-md mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <%# Work %>
+      <%= render 'work', work: @work %>
+      <%# Education %>
+      <%= render 'education', education: @education %>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="scroll-mt-20 bg-secondary-900 bg-opacity-5">
+  <div class="py-20">
+    <div class="container-sm">
+      <h2 class="text-2xl font-bold tracking-tight text-tertiary-900 sm:text-3xl">Projects</h1>
+      <p class="mt-6 text-lg leading-8 text-tertiary-600">Here are some of the projects I have built.</p>
+    </div>
+    <ul role="list" class="container-md mt-20 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+      <% @projects.each do |project| %>
+        <%= render project %>
+      <% end %>
+    </ul>
+  </div>
+</section>

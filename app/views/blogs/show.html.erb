@@ -1,0 +1,14 @@
+<div class="container-lg pt-4 md:pt-8 pb-24">
+    <div class="mb-14">
+        <% if @blog.cover_image.attached? %>
+            <div class="bg-white border border-tertiary-200 shadow rounded-lg bg-cover bg-center aspect-video" style="background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(0, 0, 0, 0.6)), url('<%= cl_image_path(@blog.cover_image.key, height: 800, width: 1400, crop: :fill) %>')" ></div>
+        <% else %>
+            <div class="bg-white border border-tertiary-200 shadow rounded-lg bg-cover bg-center aspect-video" ></div>
+        <% end %>
+    </div>
+    <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+        <p class="text-base font-semibold leading-7 text-primary-500"><%= @blog.created_at.strftime("%B %d, %Y") %></p>
+        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"><%= @blog.title %></h1>
+        <p class="mt-6 text-xl leading-8"><%= @blog.content %></p>
+    </div>
+</div>

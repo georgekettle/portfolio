@@ -1,81 +1,41 @@
-<section class="scroll-mt-20" id="about_me">
-    <div class="container-sm py-24">
-      <%= image_tag 'george.jpg', alt: 'George Kettle', height: 100, width: 100, class: 'rounded-full border border-black h-16 w-16' %>
-      <h1 class="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Ruby on Rails Developer<br>& Bootcamp Educator.</h1>
-      <p class="mt-6 text-lg leading-7 text-gray-600">I learned to code to help my mother's organic farm. My passion for small business led me to start my own venture with a friend, and for the past two years, I have been imparting my knowledge as a teacher at Le Wagon.</p>
-      <div class="mt-10 flex items-center space-x-4">
-        <%= link_to download_resume_path, class: 'btn btn-primary' do %>
-          DOWNLOAD CV
-        <% end %>
-      </div>
+<div class="relative isolate px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl py-16 lg:py-24 lg:py-44">
+        <div class="hidden sm:mb-4 sm:flex sm:justify-center justify-start">
+            <%= link_to blogs_path, class: "flex items-center rounded-full bg-white border border-tertiary-200 p-1 pr-2 text-tertiary-500 hover:text-tertiary-600 sm:text-base lg:text-sm xl:text-base" do %>
+                <span class="rounded-full bg-primary-100 px-3 py-0.5 text-sm font-semibold leading-5 text-primary-700">New writings</span>
+                <span class="ml-4 text-sm font-medium">Read the latest on the blog</span>
+                <svg class="ml-2 h-5 w-5 text-tertiary-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                </svg>
+            <% end %>
+        </div>
+        <div class="text-center">
+            <h1 class="text-4xl font-bold tracking-tight text-tertiary-900 sm:text-6xl">I'm an IndieHacker building in public 🤘</h1>
+            <p class="mt-6 text-lg leading-8 text-tertiary-600">Building a business can be difficult. I want to share my journey in case others can benefit from it. Follow along here and on Twitter.</p>
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+                <%# TWITTER LINK %>
+                <%= link_to 'https://twitter.com/george_kettle', class: "flex items-center gap-x-2 rounded-md bg-primary-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600", target: '_blank' do %>
+                    <svg viewBox="0 0 20 20" aria-hidden="true" class="h-5 w-5" fill="currentColor"><path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0 0 20 3.92a8.19 8.19 0 0 1-2.357.646 4.118 4.118 0 0 0 1.804-2.27 8.224 8.224 0 0 1-2.605.996 4.107 4.107 0 0 0-6.993 3.743 11.65 11.65 0 0 1-8.457-4.287 4.106 4.106 0 0 0 1.27 5.477A4.073 4.073 0 0 1 .8 7.713v.052a4.105 4.105 0 0 0 3.292 4.022 4.095 4.095 0 0 1-1.853.07 4.108 4.108 0 0 0 3.834 2.85A8.233 8.233 0 0 1 0 16.407a11.615 11.615 0 0 0 6.29 1.84"></path></svg>
+                    Follow along
+                <% end %>
+                <%# BLOG LINK %>
+                <%= link_to blogs_path, class: "flex items-center gap-x-2 rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-tertiary-800 border border-tertiary-200 shadow-sm hover:bg-tertiary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tertiary-900" do %>
+                    ✍🏼
+                    <span>Read the blog</span>
+                <% end %>
+            </div>
+        </div>
     </div>
-</section>
+</div>
 
-<section class="scroll-mt-20" id="testimonials">
-  <div class="py-20">
-    <div class="container-sm">
-      <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">My Mum thinks I'm amazing <span class="px-2 py-1 bg-secondary-300 rounded text-secondary-900 text-sm border border-secondary-900 rotate-6 ml-2 inline-block">BUT...</span></h1>
-      <p class="mt-6 text-lg leading-8 text-gray-600">She may be biased so don't take her word for it!<br>At <%= link_to 'Le Wagon', 'www.lewagon.com', target: '_blank' %> we receive anonymous reviews. Here's what people have to say.</p>
-    </div>
-    <div class="container-lg mt-20 relative max-h-screen overflow-hidden">
-      <div data-controller="grid" class="-mx-2">
-        <div class="grid-sizer"></div>
-        <% @quotes.each do |quote| %>
-          <div class="grid-item p-2">
-            <%= render quote %>
-          </div>
-        <% end %>
-      </div>
-      <%# Fade %>
-      <div class="absolute flex items-end justify-center bottom-0 inset-x-0 h-64 bg-gradient-to-t from-bg-light pointer-events-none">
-        <%= link_to "100's more", testimonials_path, class: 'btn pointer-events-auto' %>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="py-6">
-  <article class="flex whitespace-no-wrap overflow-x-hidden bg-primary-600 text-primary-200">
-    <div class="relative">
-      <ul class="flex animate-marqueeone">
-        <% @technologies.each do |tech| %>
-          <li class="m-8 whitespace-nowrap font-header text-md"><%= tech %></li>
+<div class="container-lg pb-32 space-y-8">
+    <h2 class="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">Recent posts</h2>
+    <%= render 'blogs/blogs', blogs: @blogs %>
+    <div class="flex justify-center">
+        <%# BLOG LINK %>
+        <%= link_to blogs_path, class: "flex items-center gap-x-2 rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-tertiary-800 border border-tertiary-200 shadow-sm hover:bg-tertiary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tertiary-900" do %>
+            <span>See all blogs</span>
         <% end %>
-      </ul>
-      <ul class="flex absolute top-0 animate-marqueetwo">
-        <% @technologies.each do |tech| %>
-          <li class="m-8 whitespace-nowrap font-header text-md"><%= tech %></li>
-        <% end %>
-      </ul>
     </div>
-  </article>
-</section>
-
-<section class="scroll-mt-20" id="work_education">
-  <div class="py-20">
-    <div class="container-sm">
-      <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Work & Education</h1>
-      <p class="mt-6 text-lg leading-8 text-gray-600">University, Bootcamps & Small Business</p>
-    </div>
-    <div class="container-md mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
-      <%# Work %>
-      <%= render 'work', work: @work %>
-      <%# Education %>
-      <%= render 'education', education: @education %>
-    </div>
-  </div>
-</section>
-
-<section id="projects" class="scroll-mt-20 bg-secondary-900 bg-opacity-5">
-  <div class="py-20">
-    <div class="container-sm">
-      <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Projects</h1>
-      <p class="mt-6 text-lg leading-8 text-gray-600">Here are some of the projects I have built.</p>
-    </div>
-    <ul role="list" class="container-md mt-20 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-      <% @projects.each do |project| %>
-        <%= render project %>
-      <% end %>
-    </ul>
-  </div>
-</section>
+</div>

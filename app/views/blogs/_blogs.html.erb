@@ -1,0 +1,16 @@
+<% reverse ||= false %>
+
+<% first_blog = blogs.first %>
+<% last_blogs = blogs.drop(1) %>
+<div class="grid gap-4 md:gap-6 md:grid-cols-2">
+    <div class="aspect-video md:aspect-auto <%= 'order-last' if reverse %>">
+        <%= render first_blog %>
+    </div>
+    <div class="grid gap-4 md:gap-6">
+        <% last_blogs.each do |blog| %>
+            <div class="aspect-video">
+                <%= render blog %>
+            </div>
+        <% end %>
+    </div>
+</div>
