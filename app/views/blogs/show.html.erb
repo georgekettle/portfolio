@@ -1,7 +1,7 @@
 <div class="container-lg pt-4 md:pt-8 pb-24">
     <div class="mb-14">
         <% if @blog.cover_image.attached? %>
-            <div class="bg-white border border-tertiary-200 shadow rounded-lg bg-cover bg-center aspect-video" style="background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(0, 0, 0, 0.6)), url('<%= cl_image_path(@blog.cover_image.key, height: 800, width: 1400, crop: :fill) %>')" ></div>
+            <div class="bg-white shadow rounded-lg bg-cover bg-center aspect-video" style="background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(0, 0, 0, 0.6)), url('<%= cl_image_path(@blog.cover_image.key, height: 800, width: 1400, crop: :fill) %>')" ></div>
         <% else %>
             <div class="bg-white border border-tertiary-200 shadow rounded-lg bg-cover bg-center aspect-video" ></div>
         <% end %>

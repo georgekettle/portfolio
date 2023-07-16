@@ -4,7 +4,7 @@
 <% last_blogs = blogs.drop(1) %>
 
 <div class="grid gap-4 md:gap-6 md:grid-cols-2">
-    <div class="aspect-video md:aspect-auto <%= 'order-last' if reverse %>">
+    <div class="aspect-video <%= 'md:aspect-auto' if blogs.count > 1 %> <%= 'order-last' if reverse %>">
         <%= render 'blogs/blog', blog: first_blog %>
     </div>
     <div class="grid gap-4 md:gap-6">
