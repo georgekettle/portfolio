@@ -1,0 +1,22 @@
+<div class="container-lg pb-24">
+    <div class="flex flex-col items-center space-y-2 py-24">
+        <h1>Blog</h1>
+    </div>
+    <div class="grid grid-2 gap-6">
+        <% blogs_sliced_by_3 = @blogs.each_slice(3).to_a %>
+        <% blogs_sliced_by_3.each do |blog_slice| %>
+            <% first_blog = blog_slice.first %>
+            <% last_blogs = blog_slice.drop(1) %>
+            <div class="grid gap-6 grid-cols-2">
+                <%= render first_blog %>
+                <div class="grid gap-6">
+                    <% last_blogs.each do |blog| %>
+                        <div class="aspect-video">
+                            <%= render blog %>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>

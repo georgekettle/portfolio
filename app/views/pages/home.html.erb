@@ -29,8 +29,8 @@
 </div>
 
 
-<div class="container-lg pb-32">
-    <h2 class="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl mb-8">From the blog</h2>
+<div class="container-lg pb-32 space-y-8">
+    <h2 class="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">From the blog</h2>
     <div class="grid gap-6 grid-cols-2">
         <div class="bg-white rounded-lg shadow p-8 flex items-end bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(0, 0, 0, 0.6)), url('https://plus.unsplash.com/premium_photo-1675484743423-57da4e8011c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cm9hZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60')">
             <div class="flex justify-between items-end gap-x-10">
@@ -62,5 +62,11 @@
                 </div>
             <% end %>
         </div>
+    </div>
+    <div class="flex justify-center">
+        <%# BLOG LINK %>
+        <%= link_to blogs_path, class: "flex items-center gap-x-2 rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-tertiary-800 border border-tertiary-200 shadow-sm hover:bg-tertiary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tertiary-900", target: '_blank' do %>
+            <span>See all blogs</span>
+        <% end %>
     </div>
 </div>
