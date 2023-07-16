@@ -5,18 +5,7 @@
     <div class="grid grid-2 gap-6">
         <% blogs_sliced_by_3 = @blogs.each_slice(3).to_a %>
         <% blogs_sliced_by_3.each do |blog_slice| %>
-            <% first_blog = blog_slice.first %>
-            <% last_blogs = blog_slice.drop(1) %>
-            <div class="grid gap-6 grid-cols-2">
-                <%= render first_blog %>
-                <div class="grid gap-6">
-                    <% last_blogs.each do |blog| %>
-                        <div class="aspect-video">
-                            <%= render blog %>
-                        </div>
-                    <% end %>
-                </div>
-            </div>
+            <%= render 'blogs/blogs', blogs: blog_slice %>
         <% end %>
     </div>
 </div>

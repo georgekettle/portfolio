@@ -1,0 +1,12 @@
+<% first_blog = blogs.first %>
+<% last_blogs = blogs.drop(1) %>
+<div class="grid gap-6 grid-cols-2">
+    <%= render first_blog %>
+    <div class="grid gap-6">
+        <% last_blogs.each do |blog| %>
+            <div class="aspect-video">
+                <%= render blog %>
+            </div>
+        <% end %>
+    </div>
+</div>

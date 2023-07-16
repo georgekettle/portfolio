@@ -30,39 +30,8 @@
 
 
 <div class="container-lg pb-32 space-y-8">
-    <h2 class="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">From the blog</h2>
-    <div class="grid gap-6 grid-cols-2">
-        <div class="bg-white rounded-lg shadow p-8 flex items-end bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(0, 0, 0, 0.6)), url('https://plus.unsplash.com/premium_photo-1675484743423-57da4e8011c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cm9hZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60')">
-            <div class="flex justify-between items-end gap-x-10">
-                <div class="space-y-2 text-white">
-                    <p class="h3 text-white">Start. Don't stop. Keep going.</p>
-                    <p class="line-clamp-2">Building a business can be difficult. I want to share my journey in case others can benefit from it. Follow along here and on Twitter.</p>
-                </div>
-                <%= link_to '#', class: "shrink-0 h-10 w-10 flex items-center justify-center text-tertiary-900 bg-white shadow rounded-full" do %>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                    </svg>
-                <% end %>
-            </div>
-        </div>
-        <div class="grid gap-6">
-            <% 2.times do %>
-                <div class="bg-white rounded-lg shadow p-8 h-96 flex items-end bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(0, 0, 0, 0.6)), url('https://plus.unsplash.com/premium_photo-1675484743423-57da4e8011c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cm9hZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60')">
-                    <div class="flex justify-between items-end gap-x-10">
-                        <div class="space-y-2 text-white">
-                            <p class="h3 text-white">Start. Don't stop. Keep going.</p>
-                            <p class="line-clamp-2">Building a business can be difficult. I wanted to share my journey in case others can benefit from it. Follow along here and on Twitter. Follow along ✍🏼</p>
-                        </div>
-                        <%= link_to '#', class: "shrink-0 h-10 w-10 flex items-center justify-center text-tertiary-900 bg-white shadow rounded-full" do %>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                            </svg>
-                        <% end %>
-                    </div>
-                </div>
-            <% end %>
-        </div>
-    </div>
+    <h2 class="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">Recent posts</h2>
+    <%= render 'blogs/blogs', blogs: @blogs %>
     <div class="flex justify-center">
         <%# BLOG LINK %>
         <%= link_to blogs_path, class: "flex items-center gap-x-2 rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-tertiary-800 border border-tertiary-200 shadow-sm hover:bg-tertiary-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tertiary-900", target: '_blank' do %>

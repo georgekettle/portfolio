@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @blogs = Blog.first(3)
   end
 
   def testimonials
