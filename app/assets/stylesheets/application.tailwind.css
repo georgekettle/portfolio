@@ -75,4 +75,4 @@
     .label {
         @apply block text-sm font-medium leading-6 text-tertiary-900
     }
-}
+}@import 'actiontext.css';
