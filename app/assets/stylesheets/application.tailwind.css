@@ -36,7 +36,7 @@
 
     p,
     .p {
-        @apply text-base leading-loose mb-6 font-medium;
+        @apply text-base font-medium;
     }
 
     /* CONTAINERS */
