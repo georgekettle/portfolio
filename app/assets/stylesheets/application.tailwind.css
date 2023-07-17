@@ -71,4 +71,8 @@
     .input-as-header {
         @apply shadow-none mt-0 bg-transparent border-0 text-tertiary-900 ring-0 px-0 transition-all duration-100 ease-in-out focus:form-input;
     }
+
+    .label {
+        @apply block text-sm font-medium leading-6 text-tertiary-900
+    }
 }
