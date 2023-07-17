@@ -10,7 +10,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['Satoshi', 'sans-serif'],
+      sans: ['General Sans', 'sans-serif'],
       header: ['Satoshi', 'sans-serif']
     },
     extend: {

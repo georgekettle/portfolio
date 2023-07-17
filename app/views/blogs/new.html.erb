@@ -10,7 +10,7 @@
             <div>
                 <%= f.label :body, class: 'label' %>
                 <div data-controller="quill" class="mt-2">
-                    <div data-quill-target="editor" class="bg-white">
+                    <div data-quill-target="editor" class="quill-content bg-white">
                         <%# This is where the user will edit the content %>
                     </div>
                     <%= f.hidden_field :body, data: { quill_target: 'input' } %>
