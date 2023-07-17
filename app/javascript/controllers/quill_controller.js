@@ -2,14 +2,16 @@ import { Controller } from "@hotwired/stimulus"
 import Quill from 'quill'
 
 export default class extends Controller {
+  static targets = [ "editor", "input" ]
+
   initialize() {
-    const element = this.element;
-    const editor = new Quill(element, {
+    const editor = new Quill(this.editorTarget, {
       theme: 'snow' // You can customize the theme here
     });
 
     editor.on('text-change', () => {
-      element.value = editor.root.innerHTML;
+      this.inputTarget.value = editor.root.innerHTML;
+      console.log(this.inputTarget.value);
     });
   }
 }
