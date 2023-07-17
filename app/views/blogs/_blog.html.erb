@@ -4,7 +4,7 @@
     <div class="w-full flex justify-between items-end gap-x-10">
         <div class="space-y-2 text-white shrink-1">
             <p class="h3 line-clamp-2 text-white drop-shadow-sm"><%= blog.title %></p>
-            <p class="line-clamp-2 opacity-80"><%= blog.content %></p>
+            <p class="line-clamp-2 opacity-80"><%= blog.body.to_plain_text %></p>
         </div>
         <%= content_tag :div, class: "hover:shadow-lg transform scale-100 hover:scale-105 transition-all duration-200 ease-in-out shrink-0 h-10 w-10 flex items-center justify-center text-tertiary-900 bg-white shadow rounded-full" do %>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

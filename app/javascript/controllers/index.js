@@ -9,3 +9,6 @@ application.register("grid", GridController)
 
 import NavbarController from "./navbar_controller"
 application.register("navbar", NavbarController)
+
+import QuillController from "./quill_controller"
+application.register("quill", QuillController)

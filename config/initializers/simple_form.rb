@@ -26,7 +26,7 @@ SimpleForm.setup do |config|
     b.optional :readonly
   
     b.wrapper tag: 'div' do |c|
-      c.use :label, class: "block text-sm font-medium leading-6 text-tertiary-900"
+      c.use :label, class: "label"
       c.use :input,
         class: 'form-input mt-2',
         error_class: 'error'
